@@ -131,6 +131,19 @@ h3 {
         grid-template-columns: 1fr;
     }
 }
+    .contact-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.contact-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 </style>
 </head>
 
@@ -138,7 +151,7 @@ h3 {
 
 <!-- HERO -->
 <section class="hero">
-    <img src="profile.jpeg" style="width:120px;border-radius:50%;margin-bottom:20px;">
+    <img src="profile.jpeg" style="width:180px;height:180px;object-fit:cover;border-radius:50%;margin-bottom:20px;border:3px solid white;">
 <h1>Dieunome Diamoneka</h1>
     <p>
        Engineering student with hands-on experience in industrial systems and innovation, 
@@ -279,15 +292,27 @@ and contributing to operational reliability in a high-risk environment.
 
 <!-- CONTACT -->
 <section id="contact">
+<section id="contact">
 <h2>Contact</h2>
-    <p>Email: dieunome.diamoneka@2027.ucac-icam.com</p>
-    <p>Phone: +242 06 528 1374 (Whatsapp) </p>
-    <p>
-LinkedIn: 
-<a href="https://www.linkedin.com/in/dieunome-exaucé-diamoneka-05067a159" target="_blank" style="color:#cbd5f5;">
-    View my profile →
-</a>
-</p>
+
+<div class="contact-container">
+
+    <img src="profile.jpeg" class="contact-img">
+
+    <div>
+        <p>Email: dieunome.diamoneka@2027.ucac-icam.com</p>
+        <p>Phone: +242 06 528 1374</p>
+        <p>
+            LinkedIn: 
+            <a href="https://www.linkedin.com/in/TON-LIEN" target="_blank" style="color:#cbd5f5;">
+                View my profile →
+            </a>
+        </p>
+    </div>
+
+</div>
+
+</section>
 
 </section>
 
