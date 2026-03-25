@@ -100,6 +100,37 @@ a.btn:hover {
     font-size: 14px;
     opacity: 0.5;
 }
+    .image {
+    width: 100%;
+    border-radius: 14px;
+    margin-top: 20px;
+    object-fit: cover;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.section-dark {
+    background: #020617;
+}
+
+.section-light {
+    background: #0f172a;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
 </style>
 </head>
 
@@ -132,7 +163,22 @@ building impactful solutions for Africa’s development.
         access to resources, and sustainable development in Africa.
     </p>
 </section>
+<section class="section-light">
+    <h2>Experience</h2>
 
+    <div class="grid-2">
+        <div>
+            <h3>Industrial & Offshore Experience</h3>
+            <p>
+            Experience in oil & gas operations and industrial environments, working on 
+            real production systems and technical operations in complex conditions.
+            </p>
+        </div>
+
+        <img src="https://via.placeholder.com/600x400" class="image">
+    </div>
+
+</section>
 <!-- PROJECTS -->
 <section>
     <h2>Projects & Experience</h2>
@@ -164,7 +210,44 @@ and contributing to operational reliability in a high-risk environment.
 
     </div>
 </section>
+<section class="section-dark">
+    <h2>Humanitarian Engagement</h2>
 
+    <div class="grid-2">
+
+        <img src="https://via.placeholder.com/600x400" class="image">
+
+        <div>
+            <h3>Social Impact & Responsibility</h3>
+            <p>
+            Involved in initiatives focused on social impact, community engagement 
+            and responsible innovation, with a strong commitment to sustainable 
+            development in Africa.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+    <section class="section-light">
+    <h2>Education</h2>
+
+    <div class="grid-2">
+
+        <div>
+            <h3>Engineering & Business Background</h3>
+            <p>
+            UCAC-ICAM – Engineering program in innovation & entrepreneurship  
+            ESCP Business School – International program (IRA)  
+            Strong combination of technical expertise and strategic thinking.
+            </p>
+        </div>
+
+        <img src="https://via.placeholder.com/600x400" class="image">
+
+    </div>
+
+</section>
 <!-- SKILLS -->
 <section>
     <h2>Skills</h2>
