@@ -1,46 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Your Name | Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #0f172a;
-            color: white;
-            text-align: center;
-        }
-        .container {
-            padding: 80px 20px;
-        }
-        h1 {
-            font-size: 48px;
-        }
-        p {
-            font-size: 20px;
-            max-width: 600px;
-            margin: 20px auto;
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 12px 24px;
-            background: white;
-            color: black;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Dieunome Diamoneka | Portfolio</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+section {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.hero {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.hero h1 {
+    font-size: 50px;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.skill {
+    background: #1e293b;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+.footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+</style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Your Name</h1>
-        <p>
-            Engineering student building impactful innovations for Africa’s future.
-        </p>
-        <a href="#" class="btn">View my work</a>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Dieunome Diamoneka</h1>
+    <p>
+        Engineering student bridging industrial systems, innovation and entrepreneurship 
+        to build impactful solutions for Africa’s development.
+    </p>
+</section>
+
+<!-- ABOUT -->
+<section>
+    <h2>About</h2>
+    <p>
+        I am an engineering student at UCAC-ICAM with a strong background in industrial maintenance, 
+        instrumentation and production systems.
+
+        With hands-on experience in the oil & gas sector and exposure to strategic and entrepreneurial 
+        thinking through the ESCP IRA program, I combine technical expertise with a broader vision 
+        of innovation and impact.
+
+        I am particularly interested in developing solutions that improve industrial efficiency, 
+        access to resources, and sustainable development in Africa.
+    </p>
+</section>
+
+<!-- PROJECTS -->
+<section>
+    <h2>Projects & Experience</h2>
+    <div class="projects">
+
+        <div class="card">
+            <h3>Offshore Production Operations</h3>
+            <p>
+            Worked on offshore oil installations, monitoring production systems and ensuring 
+            operational reliability at Perenco Congo.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Industrial Design & Modeling</h3>
+            <p>
+            Designed piping and structural plans and developed 3D models using AutoCAD 
+            during my internship at Ponticelli.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Digital Finance Project</h3>
+            <p>
+            Contributed to the feasibility study of a digital credit solution in Senegal 
+            aimed at improving financial inclusion and access to funding.
+            </p>
+        </div>
+
     </div>
+</section>
+
+<!-- SKILLS -->
+<section>
+    <h2>Skills</h2>
+    <div class="skills">
+        <div class="skill">Industrial Maintenance</div>
+        <div class="skill">Automation</div>
+        <div class="skill">Instrumentation</div>
+        <div class="skill">AutoCAD</div>
+        <div class="skill">SolidWorks</div>
+        <div class="skill">MATLAB</div>
+        <div class="skill">Project Management</div>
+        <div class="skill">Problem Solving</div>
+        <div class="skill">Entrepreneurship</div>
+    </div>
+</section>
+
+<!-- VISION -->
+<section>
+    <h2>Vision</h2>
+    <p>
+        I aim to contribute to Africa’s development by building innovative and sustainable 
+        engineering solutions adapted to local realities.
+
+        My goal is to bridge industrial expertise, digital innovation and entrepreneurship 
+        to create systems that improve productivity, access to services and economic opportunities.
+    </p>
+</section>
+
+<!-- CONTACT -->
+<section>
+    <h2>Contact</h2>
+    <p>Email: dieunome.diamoneka@2027.ucac-icam.com</p>
+    <p>Phone: +242 06 528 1374</p>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2026 Dieunome Diamoneka
+</div>
+
 </body>
 </html>
