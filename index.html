@@ -11,6 +11,7 @@ body {
     background: #020617;
     color: white;
     scroll-behavior: smooth;
+    padding-top: 60px;
 }
 
 section {
@@ -144,11 +145,42 @@ h3 {
     border-radius: 50%;
     object-fit: cover;
 }
+    .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(2, 6, 23, 0.9);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #cbd5f5;
+}
 </style>
 </head>
 
 <body>
-
+<nav class="navbar">
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+    <a href="CV_Dieunome.PDF" target="_blank">CV</a>
+</nav>
 <!-- HERO -->
 <section class="hero">
     <img src="profile.jpeg" style="width:180px;height:180px;object-fit:cover;border-radius:50%;margin-bottom:20px;border:3px solid white;">
@@ -163,7 +195,7 @@ building impactful solutions for Africa’s development.
 </section>
 
 <!-- ABOUT -->
-<section>
+<section id="about">
     <h2>About</h2>
     <p>
         I am an engineering student at UCAC-ICAM with a strong background in industrial maintenance, 
@@ -177,7 +209,7 @@ building impactful solutions for Africa’s development.
         access to resources, and sustainable development in Africa.
     </p>
 </section>
-<section class="section-light">
+<section id="experience" class="section-light">
     <h2>Experience</h2>
 
     <div class="grid-2">
@@ -194,7 +226,7 @@ building impactful solutions for Africa’s development.
 
 </section>
 <!-- PROJECTS -->
-<section>
+<section id="projects">
     <h2>Projects & Experience</h2>
     <div class="projects">
 
@@ -224,7 +256,7 @@ and contributing to operational reliability in a high-risk environment.
 
     </div>
 </section>
-<section class="section-dark">
+<section id="humanitarian" class="section-dark">
     <h2>Humanitarian Engagement</h2>
 
     <div class="grid-2">
@@ -254,7 +286,7 @@ as a discipline that must serve people, communities and society.
     </div>
 
 </section>
-    <section class="section-light">
+    <section id="education" class="section-light">
     <h2>Education</h2>
 
     <div class="grid-2">
