@@ -10,6 +10,7 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(180deg, #0f172a, #020617);
 transition: background 0.3s ease;
+    transition: background 0.2s linear;
     color: white;
     scroll-behavior: smooth;
     padding-top: 60px;
@@ -169,6 +170,38 @@ h3 {
 .navbar a:hover {
     color: #cbd5f5;
 }
+    .hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("cover.png") center/cover no-repeat;
+    filter: brightness(0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    margin-bottom: 20px;
+}
 </style>
 </head>
 
@@ -184,15 +217,23 @@ h3 {
 </nav>
 <!-- HERO -->
 <section class="hero">
-    <img src="profile.jpeg" style="width:180px;height:180px;object-fit:cover;border-radius:50%;margin-bottom:20px;border:3px solid white;">
-<h1>Dieunome Diamoneka</h1>
-    <p>
-       Engineering student with hands-on experience in industrial systems and innovation, 
-building impactful solutions for Africa’s development.
-    </p>
 
-   <a href="#contact" class="btn">Contact Me</a>
-    <a href="CV_Dieunome.pdf" class="btn" target="_blank">View My Resume</a>
+    <div class="hero-bg"></div>
+
+    <div class="hero-content">
+        <img src="profile.jpeg" class="profile-img">
+
+        <h1>Dieunome Diamoneka</h1>
+
+        <p>
+        Engineering student with hands-on experience in industrial systems and innovation, 
+        building impactful solutions for energy and sustainable development.
+        </p>
+
+        <a href="#contact" class="btn">Contact Me</a>
+        <a href="CV_Dieunome.pdf" class="btn" target="_blank">View My Resume</a>
+    </div>
+
 </section>
 
 <!-- ABOUT -->
@@ -349,7 +390,7 @@ development of responsible infrastructures.
 
 <!-- CONTACT -->
 <section id="contact">
-<section id="contact">
+
 <h2>Contact</h2>
 
 <div class="contact-container">
@@ -404,14 +445,28 @@ window.addEventListener("scroll", () => {
     let ratio = scrollY / maxScroll;
 
     // Couleurs (tu peux ajuster après)
-    let startColor = [15, 23, 42];   // bleu foncé
-    let endColor = [2, 6, 23];       // noir bleu profond
+   let startColor = [70, 150, 220];   // bleu ciel (comme ton image)
+let midColor   = [30, 80, 150];    // bleu intermédiaire
+let endColor   = [2, 6, 23];       // bleu nuit profond
 
-    let r = Math.floor(startColor[0] + (endColor[0] - startColor[0]) * ratio);
-    let g = Math.floor(startColor[1] + (endColor[1] - startColor[1]) * ratio);
-    let b = Math.floor(startColor[2] + (endColor[2] - startColor[2]) * ratio);
+    let r, g, b;
 
-    document.body.style.background = `rgb(${r}, ${g}, ${b})`;
+if (ratio < 0.5) {
+    let localRatio = ratio * 2;
+
+    r = Math.floor(startColor[0] + (midColor[0] - startColor[0]) * localRatio);
+    g = Math.floor(startColor[1] + (midColor[1] - startColor[1]) * localRatio);
+    b = Math.floor(startColor[2] + (midColor[2] - startColor[2]) * localRatio);
+
+} else {
+    let localRatio = (ratio - 0.5) * 2;
+
+    r = Math.floor(midColor[0] + (endColor[0] - midColor[0]) * localRatio);
+    g = Math.floor(midColor[1] + (endColor[1] - midColor[1]) * localRatio);
+    b = Math.floor(midColor[2] + (endColor[2] - midColor[2]) * localRatio);
+}
+
+document.body.style.background = `linear-gradient(180deg, rgb(${r}, ${g}, ${b}), #020617)`;
 });
 </script>
 </body>
