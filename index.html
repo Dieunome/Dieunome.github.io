@@ -152,19 +152,24 @@ h3 {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(2, 6, 23, 0.9);
-    backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
-    gap: 30px;
-    padding: 15px;
+    gap: 35px;
+    padding: 18px 20px;
+    background: rgba(2, 6, 23, 0.6);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
     z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 .navbar a {
-    color: white;
+    position: relative;
+    color: #e2e8f0;
     text-decoration: none;
     font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.5px;
     transition: 0.3s;
 }
 
@@ -221,6 +226,24 @@ h3 {
     z-index: 2;
         pointer-events: none;
 }
+    .navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #cbd5f5;
+    transition: 0.3s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.navbar a:hover {
+    color: white;
+}
 </style>
 </head>
 
@@ -232,7 +255,7 @@ h3 {
     <a href="#projects">Projects</a>
     <a href="#education">Education</a>
     <a href="#contact">Contact</a>
-    <a href="CV_Dieunome.pdf" target="_blank">CV</a>
+    <a href="CV_Dieunome.pdf" target="_blank">Resume</a>
 </nav>
 <!-- HERO -->
 <section class="hero">
@@ -486,6 +509,19 @@ if (ratio < 0.5) {
 }
 
 document.body.style.background = `linear-gradient(180deg, rgb(${r}, ${g}, ${b}), #020617)`;
+});
+</script>
+<script>
+window.addEventListener("scroll", () => {
+    const navbar = document.querySelector(".navbar");
+
+    if (window.scrollY > 50) {
+        navbar.style.background = "rgba(2, 6, 23, 0.95)";
+        navbar.style.padding = "12px 20px";
+    } else {
+        navbar.style.background = "rgba(2, 6, 23, 0.6)";
+        navbar.style.padding = "18px 20px";
+    }
 });
 </script>
 </body>
