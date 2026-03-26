@@ -296,6 +296,21 @@ h3 {
         transform: translateY(0);
     }
 }
+    .hero-content {
+    transition: opacity 0.3s ease;
+}
+    <script>
+window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    const heroContent = document.querySelector(".hero-content");
+
+    let opacity = 1 - scrollY / 400;
+    heroContent.style.opacity = opacity;
+});
+</script>
+    .hero-bg {
+    will-change: transform;
+}
 </style>
 </head>
 
@@ -579,6 +594,15 @@ window.addEventListener("scroll", () => {
         navbar.style.background = "rgba(2, 6, 23, 0.6)";
         navbar.style.padding = "18px 20px";
     }
+});
+</script>
+    <script>
+window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    const heroBg = document.querySelector(".hero-bg");
+
+    // effet parallax (plus lent que le scroll)
+    heroBg.style.transform = `translateY(${scrollY * 0.4}px) scale(1.1)`;
 });
 </script>
 </body>
