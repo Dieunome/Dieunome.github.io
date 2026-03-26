@@ -311,10 +311,66 @@ window.addEventListener("scroll", () => {
     .hero-bg {
     will-change: transform;
 }
+    a.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+a.btn::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+a.btn:hover::before {
+    width: 100%;
+}
+
+a.btn:active {
+    transform: scale(0.96);
+}
+    .card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: perspective(800px) rotateX(5deg) rotateY(-5deg) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+    .image {
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.image:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+    .nav-links a {
+    transition: transform 0.2s ease;
+}
+
+.nav-links a:hover {
+    transform: translateY(-2px);
+}
+    .cursor {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 2000;
+}
 </style>
 </head>
 
 <body>
+    <div class="cursor"></div>
 <nav class="navbar">
     <span class="logo">DD</span>
 
@@ -603,6 +659,16 @@ window.addEventListener("scroll", () => {
 
     // effet parallax (plus lent que le scroll)
     heroBg.style.transform = `translateY(${scrollY * 0.4}px) scale(1.1)`;
+});
+</script>
+    <script>
+document.addEventListener("mousemove", (e) => {
+    const cursor = document.querySelector(".cursor");
+
+    if(cursor){
+        cursor.style.left = e.pageX + "px";
+        cursor.style.top = e.pageY + "px";
+    }
 });
 </script>
 </body>
