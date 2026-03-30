@@ -356,21 +356,12 @@ a.btn:active {
 
 .nav-links a:hover {
     transform: translateY(-2px);
-}
-    .cursor {
-    position: fixed;
-    width: 10px;
-    height: 10px;
-    background: white;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 2000;
-}
+
 </style>
 </head>
 
 <body>
-    <div class="cursor"></div>
+    
 <nav class="navbar">
     <span class="logo">DD</span>
 
@@ -435,8 +426,20 @@ a.btn:active {
 
         <img src="experience1.jpeg" class="image">
     </div>
+</section>
+<section>
+    <h2>Professional Experience</h2>
+
+    <div class="card">
+        <h3>Perenco – Offshore Operations</h3>
+        <p><strong>Context:</strong> Oil & gas production platform</p>
+        <p><strong>Responsibilities:</strong> Monitoring systems, ensuring operational safety</p>
+        <p><strong>Impact:</strong> Contribution to operational reliability in a high-risk environment</p>
+    </div>
 
 </section>
+    
+
 <!-- PROJECTS -->
 <section id="projects">
     <h2>Projects & Experience</h2>
@@ -468,6 +471,15 @@ and contributing to operational reliability in a high-risk environment.
 
     </div>
 </section>
+<section>
+    <h2>My Approach</h2>
+    <p>
+    I approach engineering problems through analytical thinking, field understanding 
+    and innovation. I focus on identifying real needs, designing efficient solutions 
+    and ensuring practical implementation.
+    </p>
+</section>
+    
 <section id="humanitarian" class="section-dark">
     <h2>Humanitarian Engagement</h2>
 
@@ -539,7 +551,40 @@ technical expertise, innovation and strategic thinking.
         <div class="skill">Entrepreneurship</div>
     </div>
 </section>
+<section>
+    <h2>Tools & Technologies</h2>
 
+    <div class="skills">
+        <div class="skill">AutoCAD</div>
+        <div class="skill">SolidWorks</div>
+        <div class="skill">MATLAB</div>
+        <div class="skill">Energy Systems</div>
+        <div class="skill">Process Optimization</div>
+    </div>
+
+</section>
+    <section>
+    <h2>Values</h2>
+
+    <div class="skills">
+        <div class="skill">Responsibility</div>
+        <div class="skill">Innovation</div>
+        <div class="skill">Adaptability</div>
+        <div class="skill">Teamwork</div>
+        <div class="skill">Impact</div>
+    </div>
+
+</section>
+    <section>
+    <h2>What I’m Looking For</h2>
+    <p>
+    I am looking for opportunities in engineering projects related to energy, 
+    industrial systems and sustainable development.
+
+    I am particularly interested in environments combining technical challenges, 
+    innovation and real-world impact.
+    </p>
+</section>
 <!-- VISION -->
 <section>
     <h2>Vision</h2>
@@ -557,7 +602,15 @@ models by improving efficiency, optimizing resource use and supporting the
 development of responsible infrastructures.
     </p>
 </section>
+<section>
+    <h2>Let’s Work Together</h2>
+    <p>
+    If you are looking for a motivated engineering student with a strong interest 
+    in energy and innovation, feel free to reach out.
+    </p>
 
+    <a href="#contact" class="btn">Get in Touch</a>
+</section>
 <!-- CONTACT -->
 <section id="contact">
 
@@ -582,7 +635,7 @@ development of responsible infrastructures.
 
 </section>
 
-</section>
+
 
 <!-- FOOTER -->
 <div class="footer">
@@ -661,15 +714,6 @@ window.addEventListener("scroll", () => {
     heroBg.style.transform = `translateY(${scrollY * 0.4}px) scale(1.1)`;
 });
 </script>
-    <script>
-document.addEventListener("mousemove", (e) => {
-    const cursor = document.querySelector(".cursor");
-
-    if(cursor){
-        cursor.style.left = e.pageX + "px";
-        cursor.style.top = e.pageY + "px";
-    }
-});
-</script>
+    
 </body>
 </html>
