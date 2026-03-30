@@ -356,6 +356,50 @@ a.btn:active {
 
 .nav-links a:hover {
     transform: translateY(-2px);
+    #values {
+    position: relative;
+}
+
+#values .image {
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    transition: transform 0.4s ease;
+}
+
+#values .image:hover {
+    transform: scale(1.03);
+}
+
+#values .skills {
+    margin-top: 20px;
+}
+
+#values .skill {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+    #values {
+    position: relative;
+}
+
+#values .image {
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    transition: transform 0.4s ease;
+}
+
+#values .image:hover {
+    transform: scale(1.03);
+}
+
+#values .skills {
+    margin-top: 20px;
+}
+
+#values .skill {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+}
 
 </style>
 </head>
@@ -537,20 +581,33 @@ technical expertise, innovation and strategic thinking.
 
 </section>
 <!-- SKILLS -->
-<section>
-    <h2>Skills</h2>
-    <div class="skills">
-        <div class="skill">Industrial Maintenance</div>
-        <div class="skill">Automation</div>
-        <div class="skill">Instrumentation</div>
-        <div class="skill">AutoCAD</div>
-        <div class="skill">SolidWorks</div>
-        <div class="skill">MATLAB</div>
-        <div class="skill">Project Management</div>
-        <div class="skill">Problem Solving</div>
-        <div class="skill">Entrepreneurship</div>
+<section id="values" class="section-dark">
+    <h2>Values</h2>
+
+    <div class="grid-2">
+
+        <div>
+            <h3>Core Principles</h3>
+            <p>
+            My approach is driven by strong values that guide both my technical work 
+            and my interactions.
+            </p>
+
+            <div class="skills">
+                <div class="skill">Responsibility</div>
+                <div class="skill">Innovation</div>
+                <div class="skill">Adaptability</div>
+                <div class="skill">Teamwork</div>
+                <div class="skill">Impact</div>
+            </div>
+        </div>
+
+        <img src="values.jpg" class="image">
+
     </div>
+
 </section>
+
 <section>
     <h2>Tools & Technologies</h2>
 
